@@ -1,4 +1,4 @@
-ID=`uname -a`
+ID="`user`@`hostname`"
 TRIP_FILE=var/tripped
 
 HTTP_CHECK=no
@@ -6,10 +6,16 @@ HTTP_CHECK_url=http://domain.tld/alert.txt
 CURL_OPTS="--silent -k"
 
 MAIL_CHECK=no #requires fetchmail (must configure fetchmailrc too)
-MAIL_CHECK_alertcode=TYPE_A_RANDOM_STRING_HERE
 
 IP_CHECK_url=http://domain.tld/ip.php
 
 SEND_MAIL=no #requires mailutils
 SEND_MAIL_addr=user@domain
-SEND_MAIL_fromaddr=user@domain
+SEND_MAIL_fromaddr=$ID
+
+SSH=no #must set up ssh keys
+SSH_user=remoteuser
+SSH_host=domain.tld
+SSH_port=22
+SSH_rev="19999:localhost:22"
+

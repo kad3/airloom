@@ -19,3 +19,11 @@ IP: $CURRENT_IP" | mail -s "airloom notification" $SEND_MAIL_addr -aFrom:$SEND_M
 fi
 #SEND_MAIL
 
+#SSH
+if [ $SSH = "yes" ] ; then
+  if [ "`ps aux | grep $SSH_user@$SSH_host | grep ssh`" = "" ] ; then
+    ssh -N -f -R $SSH_rev -p $SSH_port $SSH_user@$SSH_host
+  fi
+fi
+#SSH
+
