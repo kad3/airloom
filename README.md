@@ -1,3 +1,4 @@
 airloom
 =======
-test
+Depends:
+curl

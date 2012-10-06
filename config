@@ -1,0 +1,12 @@
+ID=`uname -a`
+TRIP_FILE=var/tripped
+
+SEND_MAIL=no #requires mailutils
+SEND_MAIL_addr=airloom@example.asdf
+SEND_MAIL_fromaddr=airloom@example.asdf
+
+HTTP_CHECK=no
+HTTP_CHECK_url=https://airloom.asdf/alert.html
+CURL_OPTS="--silent -k" #remove -k if you don't want curl to ignore invalid ssl certs
+
+IP_CHECK_url=https://airloom.asdf/ip.pl
