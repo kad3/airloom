@@ -1,5 +1,6 @@
-ID="`user`@`hostname`"
+ID=`whoami`@`hostname`
 TRIP_FILE=var/tripped
+IP_FILE=var/ip
 
 HTTP_CHECK=no
 HTTP_CHECK_url=http://domain.tld/alert.txt
@@ -10,11 +11,11 @@ MAIL_CHECK=no #requires fetchmail (must configure fetchmailrc too)
 IP_CHECK_url=http://domain.tld/ip.php
 
 SEND_MAIL=no #requires mailutils
-SEND_MAIL_addr=user@domain
-SEND_MAIL_fromaddr=$ID
+SEND_MAIL_addr=user@domain.tld
+SEND_MAIL_fromaddr=airloom@`hostname`
 
 SSH=no #must set up ssh keys
-SSH_user=remoteuser
+SSH_user=user
 SSH_host=domain.tld
 SSH_port=22
 SSH_rev="19999:localhost:22"
