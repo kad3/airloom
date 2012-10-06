@@ -15,6 +15,15 @@ else
   fi
 #HTTP_CHECK
 
+#MAIL_CHECK
+  if [ $CHECK_MAIL = "yes" ] ; then
+    fetchmail -f fetchmailrc
+    if [ "`mail -f --print | grep $CHECK_MAIL_alertcode`" != "" ] ; then
+      TRIP="true"
+    fi
+  fi
+#MAIL_CHECK
+
   if [ $TRIP = "true" ] ; then
     echo true > $TRIP_FILE
     ./payload.sh
