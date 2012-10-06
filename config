@@ -6,10 +6,10 @@ HTTP_CHECK_url=http://domain.tld/alert.txt
 CURL_OPTS="--silent -k"
 
 MAIL_CHECK=no #requires fetchmail (must configure fetchmailrc too)
-CHECK_MAIL_alertcode="" (type a random string here)
+MAIL_CHECK_alertcode=TYPE_A_RANDOM_STRING_HERE
 
 IP_CHECK_url=http://domain.tld/ip.php
 
 SEND_MAIL=no #requires mailutils
 SEND_MAIL_addr=user@domain
-SEND_MAIL_fromaddr=`hostname`
+SEND_MAIL_fromaddr=user@domain
