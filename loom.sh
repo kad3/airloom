@@ -18,7 +18,7 @@ else
 #MAIL_CHECK
   if [ $CHECK_MAIL = "yes" ] ; then
     fetchmail -f fetchmailrc
-    if [ "`mail -f --print | grep $CHECK_MAIL_alertcode`" != "" ] ; then
+    if [ "`mail --print | grep $CHECK_MAIL_alertcode`" != "" ] ; then
       TRIP="true"
     fi
   fi
