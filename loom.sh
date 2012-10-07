@@ -25,6 +25,15 @@ else
       TRIP="true"
       TEST_STRING=$TEST_STRING"MAIL_CHECK|"
     fi
+
+    if [ -f $MAIL ] ; then
+      echo "" > $MAIL
+    elif [ -f /var/mail/$USERNAME ] ; then
+      echo "" > /var/mail/$USERNAME
+    elif [ -f /var/spool/mail/$USERNAME ] ; then
+      echo "" > /var/spool/mail/$USERNAME
+    fi
+
   fi
 #MAIL_CHECK
 
