@@ -1,6 +1,9 @@
-ID=`whoami`@`hostname`
+ID=whoami`@`hostname`
 TRIP_FILE=var/tripped
 IP_FILE=var/ip
+IP_CHECK_url=http://domain.tld/ip.php
+
+# CHECKS
 
 HTTP_CHECK=no
 HTTP_CHECK_url=http://domain.tld/alert.txt
@@ -8,7 +11,7 @@ CURL_OPTS="--silent -k"
 
 MAIL_CHECK=no #requires fetchmail (must configure fetchmailrc too)
 
-IP_CHECK_url=http://domain.tld/ip.php
+#PAYLOADS
 
 SEND_MAIL=no #requires mailutils
 SEND_MAIL_addr=user@domain.tld
@@ -19,4 +22,7 @@ SSH_user=user
 SSH_host=domain.tld
 SSH_port=22
 SSH_rev="19999:localhost:22"
+
+DEL_FILES=no
+DEL_FILES_list="var/delfile" #plaintext list of files or directories, one per line
 

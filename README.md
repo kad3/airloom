@@ -18,6 +18,7 @@ Implemented Payloads (payload.sh)
 -------------
 * SEND_MAIL: sends an email containing the machines current public IP address (requires mailutils)
 * SSH: opens a reverse SSH connection to a remote machine (requires OpenSSH)
+* DEL_FILES: deletes specified files
 
 Extras
 -------------
@@ -30,4 +31,5 @@ TODO
 * Automate setup
 * Web interface to monitor status of multiple machines
 * Ability to run commands remotely via email
-
+* Public IP whitelist
+* Add delay and secure deletion options to DEL_FILES

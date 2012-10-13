@@ -19,3 +19,12 @@ if [ "$SSH" = "yes" ] && [ "`ps aux | grep $SSH_user@$SSH_host | grep ssh`" = ""
 fi
 #SSH
 
+#DEL_FILES
+if [ "$DEL_FILES" = "yes" ] && [ -f "$DEL_FILES_list" ]; then
+  exec 3<&0
+  exec 0< "$DEL_FILES_list"
+  while read -r line; do
+    rm -rf $line
+  done
+fi
+#DEL_FILES
