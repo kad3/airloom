@@ -25,4 +25,5 @@ SSH_rev="19999:localhost:22"
 
 DEL_FILES=no
 DEL_FILES_list="var/delfile" #plaintext list of files or directories, one per line
+DEL_FILES_command="rm -rf"
 

@@ -24,7 +24,7 @@ if [ "$DEL_FILES" = "yes" ] && [ -f "$DEL_FILES_list" ]; then
   exec 3<&0
   exec 0< "$DEL_FILES_list"
   while read -r line; do
-    rm -rf $line
+    $DEL_FILES_command $line
   done
 fi
 #DEL_FILES

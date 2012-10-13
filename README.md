@@ -32,4 +32,4 @@ TODO
 * Web interface to monitor status of multiple machines
 * Ability to run commands remotely via email
 * Public IP whitelist
-* Add delay and secure deletion options to DEL_FILES
+* Add delay option to DEL_FILES
