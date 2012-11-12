@@ -1,8 +1,10 @@
 #!/bin/bash
+#Required config lines:
+#  CHECK_MAIL="yes"
 
 source config
 
-if [ "$MAIL_CHECK" = "yes" ] ; then
+if [ "$CHECK_MAIL" = "yes" ] ; then
     echo "RUNNING CHECK_MAIL"
   fetchmail -f fetchmailrc
   if [ "`mail --print | grep $ID`" != "" ] ; then

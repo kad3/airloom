@@ -1,29 +1,30 @@
-ID=whoami`@`hostname`
+ID=`whoami`@`hostname`
 TRIP_FILE=var/tripped
 IP_FILE=var/ip
 IP_CHECK_url=http://domain.tld/ip.php
-
-# CHECKS
-
-HTTP_CHECK=no
-HTTP_CHECK_url=http://domain.tld/alert.txt
 CURL_OPTS="--silent -k"
 
-MAIL_CHECK=no #requires fetchmail (must configure fetchmailrc too)
+#CHECK_HTTP
+CHECK_HTTP=no
+CHECK_HTTP_url=http://domain.tld/alert.txt
 
-#PAYLOADS
+#CHECK_MAIL
+CHECK_MAIL=no #requires fetchmail (must configure fetchmailrc too)
 
-SEND_MAIL=no #requires mailutils
-SEND_MAIL_addr=user@domain.tld
-SEND_MAIL_fromaddr=airloom@`hostname`
+#PAYLOAD_MAIL
+PAYLOAD_MAIL=no #requires mailutils
+PAYLOAD_MAIL_addr=user@domain.tld
+PAYLOAD_MAIL_fromaddr=airloom@`hostname`
 
-SSH=no #must set up ssh keys
-SSH_user=user
-SSH_host=domain.tld
-SSH_port=22
-SSH_rev="19999:localhost:22"
+#PAYLOAD_MAIL
+PAYLOAD_SSH=no #must set up ssh keys
+PAYLOAD_SSH_user=airloom
+PAYLOAD_SSH_host=domain.tld
+PAYLOAD_SSH_port=22
+PAYLOAD_SSH_rev="19999:localhost:22"
 
-DEL_FILES=no
-DEL_FILES_list="var/delfile" #plaintext list of files or directories, one per line
-DEL_FILES_command="rm -rf"
+#PAYLOAD_DEL_FILES
+PAYLOAD_DEL_FILES=no
+PAYLOAD_DEL_FILES_list="var/delfile" #plaintext list of files or directories, one per line
+PAYLOAD_DEL_FILES_command="rm -rf"
 

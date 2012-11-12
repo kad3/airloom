@@ -2,7 +2,7 @@
 
 source config
 
-if [ "`cat $TRIP_FILE`" = "true" ] ; then
+if [ "`cat $TRIP_FILE`" != "true" ] ; then
   ./checks.sh
 fi
 
