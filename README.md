@@ -9,16 +9,16 @@ Setup
 * Edit the config depending on your needs. Everything is disabled by default.
 * Add a cronjob to run loom.sh.
 
-Implemented Checks (loom.sh)
+Implemented Checks
 -------------
-* HTTP_CHECK: checks a URL for an alert (requires curl)
-* MAIL_CHECK: checks a mailbox for an alert (requires fetchmail)
+* CHECK_HTTP: checks a URL for an alert (requires curl)
+* CHECK_MAIL: checks a mailbox for an alert (requires fetchmail)
 
-Implemented Payloads (payload.sh)
+Implemented Payloads
 -------------
-* SEND_MAIL: sends an email containing the machines current public IP address (requires mailutils)
-* SSH: opens a reverse SSH connection to a remote machine (requires OpenSSH)
-* DEL_FILES: deletes specified files
+* PAYLOAD_MAIL: sends an email containing the machines current public IP address (requires mailutils)
+* PAYLOAD_SSH: opens a reverse SSH connection to a remote machine (requires OpenSSH)
+* PAYLOAD_DEL_FILES: deletes specified files
 
 Extras
 -------------
@@ -32,4 +32,4 @@ TODO
 * Web interface to monitor status of multiple machines
 * Ability to run commands remotely via email
 * Public IP whitelist
-* Add delay option to DEL_FILES
+* Add delay option to PAYLOAD_DEL_FILES
