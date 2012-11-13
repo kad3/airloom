@@ -2,8 +2,8 @@
 
 source config
 
-LAST_IP=`cat $IP_FILE` | tr -d ' '
-CURRENT_IP=`curl $CURL_OPTS $IP_CHECK_url` | tr -d ' '
+LAST_IP=`cat $IP_FILE | tr -d ' '`
+CURRENT_IP=`curl $CURL_OPTS $IP_CHECK_url | tr -d ' '`
 NEW_IP="false"
 
 if [ "$CURRENT_IP" != "$LAST_IP" ]; then
