@@ -2,6 +2,7 @@
 
 source config
 
+# Ignores the checks if AirLoom has already been tripped
 if [ "`cat $TRIP_FILE`" != "true" ] ; then
   ./checks.sh
 fi

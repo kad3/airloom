@@ -1,4 +1,9 @@
 #!/bin/bash
+#Required config lines:
+#  PAYLOAD_PHPLOG=yes
+#  PAYLOAD_PHPLOG_url=example.com
+#
+#  A simple PHP script which is compabile with this module is provided in extra/log.php
 
 source config
 

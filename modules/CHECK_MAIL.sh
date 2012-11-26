@@ -11,6 +11,7 @@ if [ "$CHECK_MAIL" = "yes" ] ; then
     TRIP="true"
   fi
 
+  # Checks for mailbox environment variables and looks for a mailbox if none are set
   if [ -f $MAIL ] ; then
     echo "" > $MAIL
   elif [ -f /var/mail/$USERNAME ] ; then
@@ -20,7 +21,6 @@ if [ "$CHECK_MAIL" = "yes" ] ; then
   fi
 
 fi
-
 
 if [ "$TRIP" = "true" ] ; then
   echo true > $TRIP_FILE

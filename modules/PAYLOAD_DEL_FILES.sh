@@ -1,4 +1,10 @@
 #!/bin/bash
+#Required config lines:
+#  PAYLOAD_DEL_FILES=yes
+#  PAYLOAD_DEL_FILES_list="/path/to/file/containing/filelist"
+#  PAYLOAD_DEL_FILES_command="rm -rf"
+#
+#  The FILE_command line can be changed to use a secure deletion utitly such as srm
 
 source config
 

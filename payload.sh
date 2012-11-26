@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script runs all the payload modules and must be updated if new modules are added. Be sure to run them correctly if they are not shell scripts.
 
 source config
 

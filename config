@@ -1,12 +1,16 @@
-ID=`whoami`@`hostname`
+# This is the global configuration file for AirLoom and all modules.
+# The only line that absolutely must be changed from its default is IP_CHECK_url.
+# The rest are fine until you start enabling modules.
+
+ID=`whoami`@`hostname` # This is a unique identifier you will need for alerting AirLoom remotely.
 TRIP_FILE=var/tripped
 IP_FILE=var/ip
-IP_CHECK_url=http://domain.tld/ip.php
-CURL_OPTS="--silent -k"
+IP_CHECK_url=http://domain.tld/ip.php # Sample scripts are provided in ./extra/ in PHP and Perl.
+CURL_OPTS="--silent -k" # The -k option tells curl to ignore invalid SSL certificates. Remove it if that's not what you want.
 
 #CHECK_HTTP
 CHECK_HTTP=no
-CHECK_HTTP_url=http://domain.tld/alert.txt
+CHECK_HTTP_url=http://domain.tld/alert.txt # This can be a plain text document with a list of IDs. A web interface for modifying the list is provided in ./extra/alert.php.
 
 #CHECK_MAIL
 CHECK_MAIL=no #requires fetchmail (must configure fetchmailrc too)
@@ -14,10 +18,10 @@ CHECK_MAIL=no #requires fetchmail (must configure fetchmailrc too)
 #PAYLOAD_MAIL
 PAYLOAD_MAIL=no #requires mailutils
 PAYLOAD_MAIL_addr=user@domain.tld
-PAYLOAD_MAIL_fromaddr=airloom@`hostname`
+PAYLOAD_MAIL_fromaddr=airloom@`hostname` # This address can be anything, but be mindful of spam filters :)
 
-#PAYLOAD_MAIL
-PAYLOAD_SSH=no #must set up ssh keys
+#PAYLOAD_SSH
+PAYLOAD_SSH=no #must set up ssh keys and openssh-server
 PAYLOAD_SSH_user=airloom
 PAYLOAD_SSH_host=domain.tld
 PAYLOAD_SSH_port=22
@@ -29,6 +33,6 @@ PAYLOAD_DEL_FILES_list="var/delfile" #plaintext list of files or directories, on
 PAYLOAD_DEL_FILES_command="rm -rf"
 
 #PAYLOAD_PHPLOG
-PAYLOAD_PHPLOG=yes
-PAYLOAD_PHPLOG_url=http://domain.tld/log.php
+PAYLOAD_PHPLOG=no
+PAYLOAD_PHPLOG_url=http://domain.tld/log.php  # A simple PHP script compatible with this module is provided in ./extra/log.php.
 
